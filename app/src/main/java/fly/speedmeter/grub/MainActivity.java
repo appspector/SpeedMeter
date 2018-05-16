@@ -10,8 +10,8 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.style.RelativeSizeSpan;
@@ -21,7 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Chronometer;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.gc.materialdesign.views.ProgressBarCircularIndeterminate;
 import com.gc.materialdesign.widgets.Dialog;
@@ -31,7 +31,7 @@ import com.melnykov.fab.FloatingActionButton;
 import java.util.Locale;
 
 
-public class MainActivity extends ActionBarActivity implements LocationListener, GpsStatus.Listener {
+public class MainActivity extends AppCompatActivity implements LocationListener, GpsStatus.Listener {
 
     private SharedPreferences  sharedPreferences;
     private LocationManager mLocationManager;
@@ -117,15 +117,15 @@ public class MainActivity extends ActionBarActivity implements LocationListener,
 
         mLocationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
-        satellite = (TextView) findViewById(R.id.satellite);
-        status = (TextView) findViewById(R.id.status);
-        accuracy = (TextView) findViewById(R.id.accuracy);
-        maxSpeed = (TextView) findViewById(R.id.maxSpeed);
-        averageSpeed = (TextView) findViewById(R.id.averageSpeed);
-        distance = (TextView) findViewById(R.id.distance);
-        time = (Chronometer) findViewById(R.id.time);
-        currentSpeed = (TextView) findViewById(R.id.currentSpeed);
-        progressBarCircularIndeterminate = (ProgressBarCircularIndeterminate) findViewById(R.id.progressBarCircularIndeterminate);
+        satellite =  findViewById(R.id.satellite);
+        status =  findViewById(R.id.status);
+        accuracy =  findViewById(R.id.accuracy);
+        maxSpeed =  findViewById(R.id.maxSpeed);
+        averageSpeed =  findViewById(R.id.averageSpeed);
+        distance =  findViewById(R.id.distance);
+        time =  findViewById(R.id.time);
+        currentSpeed =  findViewById(R.id.currentSpeed);
+        progressBarCircularIndeterminate = findViewById(R.id.progressBarCircularIndeterminate);
 
         time.setText("00:00:00");
         time.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
