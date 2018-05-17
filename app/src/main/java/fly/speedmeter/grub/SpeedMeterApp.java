@@ -18,6 +18,6 @@ public class SpeedMeterApp extends Application {
                 .addScreenshotMonitor()
                 .addHttpMonitor()
                 .addPerformanceMonitor()
-                .run("YjcwODI5ZGItNGY2Ni00NTQ0LTgyYTgtNmZjNjlmM2NjN2Yy");
+                .run(BuildConfig.APPSPECTOR_API_KEY);
     }
 }
