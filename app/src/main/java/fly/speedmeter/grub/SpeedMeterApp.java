@@ -14,10 +14,7 @@ public class SpeedMeterApp extends Application {
 
     public void initAppSpector() {
         AppSpector.build(this)
-                .addLogMonitor()
-                .addScreenshotMonitor()
-                .addHttpMonitor()
-                .addPerformanceMonitor()
+                .withDefaultMonitors()
                 .run(BuildConfig.APPSPECTOR_API_KEY);
     }
 }
